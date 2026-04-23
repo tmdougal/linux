@@ -1,0 +1,39 @@
+########## Forwarding / Features ##########
+
+DisableForwarding yes
+X11Forwarding no
+
+########## Legacy / Network Behavior ##########
+
+IgnoreRhosts yes
+UseDNS no
+
+########## Authentication ##########
+
+PubkeyAuthentication yes
+PasswordAuthentication no
+KbdInteractiveAuthentication no
+PermitRootLogin no
+PermitEmptyPasswords no
+MaxAuthTries 3
+
+########## Banner / Info Leakage ##########
+
+DebianBanner no
+
+########## Cryptography ##########
+
+Ciphers aes256-gcm@openssh.com,aes128-gcm@openssh.com
+HostKeyAlgorithms rsa-sha2-512,rsa-sha2-256,ssh-ed25519
+MACs hmac-sha2-512-etm@openssh.com,hmac-sha2-256-etm@openssh.com,umac-128-etm@openssh.com
+KexAlgorithms sntrup761x25519-sha512@openssh.com,curve25519-sha256@libssh.org
+HostKey /etc/ssh/ssh_host_ed25519_key
+
+########## Connection Controls ##########
+
+Port #Insert your port here.
+MaxSessions 2
+MaxAuthTries 3
+PerSourceMaxStartups 1
+ClientAliveInterval 300
+ClientAliveCountMax 2
