@@ -1,14 +1,14 @@
-########## Forwarding / Features ##########
+# Forwarding / Features
 
 DisableForwarding yes
 X11Forwarding no
 
-########## Legacy / Network Behavior ##########
+# Legacy / Network Behavior
 
 IgnoreRhosts yes
 UseDNS no
 
-########## Authentication ##########
+# Authentication
 
 PubkeyAuthentication yes
 PasswordAuthentication no
@@ -16,11 +16,11 @@ KbdInteractiveAuthentication no
 PermitRootLogin no
 PermitEmptyPasswords no
 
-########## Banner / Info Leakage ##########
+# Banner / Info Leakage
 
 #DebianBanner no (do not include this line on non-debian based distros, it will cause the service to fail on restart)
 
-########## Cryptography ##########
+# Cryptography
 
 Ciphers aes256-gcm@openssh.com,aes128-gcm@openssh.com
 HostKeyAlgorithms rsa-sha2-512,rsa-sha2-256,ssh-ed25519
@@ -28,7 +28,7 @@ MACs hmac-sha2-512-etm@openssh.com,hmac-sha2-256-etm@openssh.com,umac-128-etm@op
 KexAlgorithms sntrup761x25519-sha512@openssh.com,curve25519-sha256@libssh.org
 HostKey /etc/ssh/ssh_host_ed25519_key
 
-########## Connection Controls ##########
+# Connection Controls
 
 Port #Insert your port here.
 MaxSessions 2
