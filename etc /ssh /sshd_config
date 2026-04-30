@@ -2,6 +2,8 @@
 
 DisableForwarding yes
 X11Forwarding no
+AllowTcpForwarding no
+AllowAgentForwarding no
 
 # Legacy / Network Behavior
 
@@ -10,6 +12,7 @@ UseDNS no
 
 # Authentication
 
+AllowUsers #User
 PubkeyAuthentication yes
 PasswordAuthentication no
 KbdInteractiveAuthentication no
@@ -18,7 +21,7 @@ PermitEmptyPasswords no
 
 # Banner / Info Leakage
 
-#DebianBanner no (do not include this line on non-debian based distros, it will cause the service to fail on restart)
+#DebianBanner no (do not include this line on non-debian based distros, it will cause the daemon to fail on restart)
 
 # Cryptography
 
@@ -33,6 +36,11 @@ HostKey /etc/ssh/ssh_host_ed25519_key
 Port #Insert your port here.
 MaxSessions 2
 MaxAuthTries 3
-PerSourceMaxStartups 1
+PerSourceMaxStartups 2
 ClientAliveInterval 300
 ClientAliveCountMax 2
+TCPKeepAlive no
+
+# Logging
+LogLevel VERBOSE
+PrintLastLog yes
