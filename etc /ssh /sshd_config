@@ -43,4 +43,3 @@ TCPKeepAlive no
 
 # Logging
 LogLevel VERBOSE
-PrintLastLog yes
